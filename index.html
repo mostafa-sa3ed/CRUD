@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ***** Font Family ***** -->
+    <link
+      rel="preconnect"
+      class="text-decoration-none mx-2 bg-black rounded-circle text-white"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      class="text-decoration-none mx-2 bg-black rounded-circle text-white"
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&family=Amatic+SC&family=Inter+Tight:wght@100&family=Montserrat:wght@500&family=Open+Sans:ital,wght@0,300;0,500;1,300&family=Poppins:ital,wght@0,300;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ***** Font Family ***** -->
+
+    <!-- ***** Fontawesome ***** -->
+    <link
+      rel="stylesheet"
+      class="text-decoration-none mx-2 bg-black rounded-circle text-white"
+      href="css/all.min.css"
+    />
+    <!-- ***** Fontawesome ***** -->
+
+    <!-- ***** Bootstrap ***** -->
+    <link
+      rel="stylesheet"
+      class="text-decoration-none mx-2 bg-black rounded-circle text-white"
+      href="css/bootstrap.min.css"
+    />
+    <!-- ***** Bootstrap ***** -->
+
+    <!-- ***** css style ***** -->
+    <link
+      rel="stylesheet"
+      class="text-decoration-none mx-2 bg-black rounded-circle text-white"
+      href="css/main.css"
+    />
+    <!-- ***** css style ***** -->
+    <title>CRUDS-EXercise</title>
+  </head>
+  <body>
+    <div class="collect1">
+      <div class="collect2">
+        <div class="w-50 m-auto shadow-lg my-4 p-5 rounded-5">
+          <h1 class="text-center text-bg-info rounded-3">CRUD SYSTEM</h1>
+          <input
+            type="text"
+            id="productName"
+            class="form-control my-3"
+            placeholder="Enter Prouduct Name"
+          />
+          <input
+            type="text"
+            id="productGategory"
+            class="form-control my-3"
+            placeholder="Enter Gategory Name"
+          />
+          <input
+            type="number"
+            id="productPrice"
+            class="form-control my-3"
+            placeholder="Enter Price Name"
+          />
+          <textarea
+            class="form-control"
+            id="productDesc"
+            cols="30"
+            rows="5"
+            placeholder="Enter Prouduct Description"
+          ></textarea>
+          <button
+            onclick="getElementValue()"
+            id="addBtn"
+            class="btn btn-primary my-3 d-block"
+          >
+            Add Product
+          </button>
+          <button
+            onclick="finalUpdate()"
+            id="updateBtn"
+            class="btn btn-warning my-3 py-2 d-none d-block"
+          >
+            Update Product
+          </button>
+          <input
+            type="text"
+            onkeyup="search(this.value)"
+            class="form-control"
+            id="searchId"
+            placeholder="Search ... "
+          />
+        </div>
+        <div class="container">
+          <table class="table text-center rounded-3">
+            <thead>
+              <th>Index</th>
+              <th>Name</th>
+              <th>Gategory</th>
+              <th>Price</th>
+              <th>Description</th>
+              <th>Delete</th>
+              <th>Update</th>
+            </thead>
+            <tbody id="tbodyId"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ***** JS Code ***** -->
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- ***** JS Code ***** -->
+  </body>
+</html>
